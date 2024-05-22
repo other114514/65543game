@@ -32,6 +32,11 @@ index='''<meta charset="utf-8">
                                                                           color: #ffffff; /* 白色文字 */
                                                                               text-decoration: none; /* 去掉超链接下划线 */
                                                                                 }
+                                                    
+  .link2 {
+  display: block;                                                                                                 margin: 10px 0;                                                                                                 font-size: 24px;                                                                                                font-weight: bold;                                                                                              color: #ff0000; /*红色文字 */                                                                                  text-decoration: none; /* 去掉超链接下划线 */
+        }
+        </style>
                                                                                 </style>
                                                                                 </head>
                                                                                 <body>
@@ -42,7 +47,7 @@ def fu(d):
     if not i.startswith(".") and os.path.isfile(d+'/'+i) and i!='index.html':
         index_+=f"<a href='/otherrepo.github.io{d[1:]}/{i}' class='link'>{i}</a></br>"
     elif os.path.isdir(d+'/'+i) and not i.startswith('.'):   
-        index_+=f"<a href='/otherrepo.github.io{d[1:]}/{i}/index.html' class='link'>{i}</a></br>"
+        index_+=f"<a href='/otherrepo.github.io{d[1:]}/{i}/index.html' class='link2'>{i}</a></br>"
         fu(d+'/'+i)
  index_+='''</div>
  </body>
